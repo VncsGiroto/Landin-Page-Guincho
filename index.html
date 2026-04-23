@@ -27,16 +27,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap"
+      rel="preload"
+      as="image"
+      href="./img/optimized/hero-4-960.webp"
+      imagesrcset="./img/optimized/hero-4-640.webp 640w, ./img/optimized/hero-4-960.webp 960w, ./img/optimized/hero-4-1280.webp 1280w"
+      imagesizes="(max-width: 719px) 100vw, 45vw"
+      type="image/webp"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Oswald:wght@600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "AutomotiveBusiness",
         "name": "GiroFrancis Auto Socorro",
-        "image": "./img/logo.png",
+        "image": "./img/optimized/logo-320.webp",
         "telephone": "+55-11-97648-7350",
         "address": {
           "@type": "PostalAddress",
@@ -85,10 +93,13 @@
       <div class="container topbar">
         <a class="brand" href="#top" aria-label="GiroFrancis Auto Socorro">
           <img
-            src="./img/logo.png"
+            src="./img/optimized/logo-320.webp"
+            srcset="./img/optimized/logo-220.webp 220w, ./img/optimized/logo-320.webp 320w"
+            sizes="(max-width: 719px) 156px, 240px"
             alt="Logo GiroFrancis"
             width="344"
             height="148"
+            fetchpriority="high"
             decoding="async"
           />
         </a>
@@ -180,11 +191,14 @@
           <div class="hero__visual">
             <div class="hero__card hero__card--photo">
               <img
-                src="./img/4.jpeg"
+                src="./img/optimized/hero-4-960.webp"
+                srcset="./img/optimized/hero-4-640.webp 640w, ./img/optimized/hero-4-960.webp 960w, ./img/optimized/hero-4-1280.webp 1280w"
+                sizes="(max-width: 719px) 100vw, 45vw"
                 alt="Caminhão da GiroFrancis realizando atendimento de guincho"
                 width="1200"
                 height="900"
                 fetchpriority="high"
+                decoding="async"
               />
             </div>
             <div class="hero__card hero__card--stat">
@@ -229,7 +243,9 @@
           <div class="services__grid">
             <article class="service-card">
               <img
-                src="./img/1.jpeg"
+                src="./img/optimized/service-1-800.webp"
+                srcset="./img/optimized/service-1-480.webp 480w, ./img/optimized/service-1-800.webp 800w"
+                sizes="(max-width: 979px) 100vw, 25vw"
                 alt="Guincho leve da GiroFrancis"
                 width="1024"
                 height="768"
@@ -244,7 +260,9 @@
 
             <article class="service-card">
               <img
-                src="./img/2.jpeg"
+                src="./img/optimized/service-2-800.webp"
+                srcset="./img/optimized/service-2-480.webp 480w, ./img/optimized/service-2-800.webp 800w"
+                sizes="(max-width: 979px) 100vw, 25vw"
                 alt="Caminhão plataforma para remoção e reboque"
                 width="1024"
                 height="768"
@@ -259,7 +277,9 @@
 
             <article class="service-card">
               <img
-                src="./img/3.jpeg"
+                src="./img/optimized/service-3-800.webp"
+                srcset="./img/optimized/service-3-480.webp 480w, ./img/optimized/service-3-800.webp 800w"
+                sizes="(max-width: 979px) 100vw, 25vw"
                 alt="Veículo de reboque para transporte especial"
                 width="1024"
                 height="768"
@@ -274,7 +294,9 @@
 
             <article class="service-card">
               <img
-                src="./img/6.jpeg"
+                src="./img/optimized/service-6-800.webp"
+                srcset="./img/optimized/service-6-480.webp 480w, ./img/optimized/service-6-800.webp 800w"
+                sizes="(max-width: 979px) 100vw, 25vw"
                 alt="Socorro mecânico e atendimento emergencial"
                 width="1024"
                 height="768"
@@ -314,7 +336,7 @@
             <span>Telefone: (11) 97648-7350</span>
             <a
               class="btn btn--secondary contact-track"
-              href="https://wa.me/5511976487350."
+              href="https://wa.me/5511976487350"
               target="_blank"
               rel="noopener noreferrer"
               data-contact-type="whatsapp"
@@ -343,9 +365,36 @@
           </div>
 
           <div class="gallery__grid">
-            <img src="./img/5.jpeg" alt="Caminhão de guincho GiroFrancis em operação" width="1024" height="768" loading="lazy" decoding="async" />
-            <img src="./img/4.jpeg" alt="Guincho GiroFrancis preparado para atendimento" width="1200" height="900" loading="lazy" decoding="async" />
-            <img src="./img/2.jpeg" alt="Plataforma de reboque da GiroFrancis" width="1024" height="768" loading="lazy" decoding="async" />
+            <img
+              src="./img/optimized/gallery-5-960.webp"
+              srcset="./img/optimized/gallery-5-640.webp 640w, ./img/optimized/gallery-5-960.webp 960w"
+              sizes="(max-width: 979px) 100vw, 34vw"
+              alt="Caminhão de guincho GiroFrancis em operação"
+              width="1024"
+              height="768"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="./img/optimized/hero-4-960.webp"
+              srcset="./img/optimized/hero-4-640.webp 640w, ./img/optimized/hero-4-960.webp 960w"
+              sizes="(max-width: 979px) 100vw, 36vw"
+              alt="Guincho GiroFrancis preparado para atendimento"
+              width="1200"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              src="./img/optimized/service-2-800.webp"
+              srcset="./img/optimized/service-2-480.webp 480w, ./img/optimized/service-2-800.webp 800w"
+              sizes="(max-width: 979px) 100vw, 30vw"
+              alt="Plataforma de reboque da GiroFrancis"
+              width="1024"
+              height="768"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </section>

@@ -1,0 +1,146 @@
+:root {
+  --bg: #0f1412;
+  --card: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --text: #f8f4ec;
+  --muted: #c4cabd;
+  --accent: #ffbf1f;
+  --danger: #ff6d2d;
+  --shadow: 0 22px 50px rgba(0, 0, 0, 0.24);
+  --radius-lg: 28px;
+  --radius-md: 20px;
+  --container: 1180px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.js-enhanced {
+  scroll-behavior: auto;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background:
+    radial-gradient(circle at top right, rgba(255, 191, 31, 0.14), transparent 24%),
+    radial-gradient(circle at left top, rgba(0, 139, 74, 0.18), transparent 30%),
+    var(--bg);
+  color: var(--text);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -12% auto auto -10%;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 191, 31, 0.08), transparent 68%);
+  pointer-events: none;
+  z-index: -1;
+  animation: ambientDrift 18s ease-in-out infinite;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+ul {
+  margin: 0;
+}
+
+.container {
+  width: min(calc(100% - 2rem), var(--container));
+  margin: 0 auto;
+}
+
+.trust-strip,
+.services,
+.coverage,
+.gallery,
+.final-cta {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 2.5rem;
+  height: 2px;
+  background: currentColor;
+}
+
+.hero h1,
+.section-heading h2,
+.coverage h2,
+.final-cta h2 {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  text-transform: uppercase;
+  animation: titleSettle 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero__lead,
+.section-heading p,
+.coverage p,
+.final-cta p,
+.trust-strip p,
+.service-card p,
+.site-footer p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.hero__lead {
+  margin-top: 1rem;
+  max-width: 62ch;
+  font-size: 1.04rem;
+  animation: copyFade 1s ease 0.12s both;
+}
+
+.section-heading {
+  max-width: 60ch;
+  margin-bottom: 1.6rem;
+}
+
+.section-heading h2,
+.coverage h2,
+.final-cta h2 {
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  margin-bottom: 0.9rem;
+}
